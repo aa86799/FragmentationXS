@@ -10,6 +10,12 @@
             android:id="@+id/nav_discover"
             android:icon="@drawable/ic_discover_white_24dp"
             android:title="@string/discover"/>
+
+        <item
+            android:id="@+id/nav_discover_vp2"
+            android:icon="@drawable/ic_discover_white_24dp"
+            android:title="Discover(ViewPager2)"/>
+
         <item
             android:id="@+id/nav_shop"
             android:icon="@drawable/ic_message_white_24dp"

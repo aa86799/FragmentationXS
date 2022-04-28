@@ -13,7 +13,7 @@ public class DiscoverFragmentAdapter extends FragmentPagerAdapter {
     String[] mTitles;
 
     public DiscoverFragmentAdapter(FragmentManager fm, String... titles) {
-        super(fm);
+        super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT); // behavior 默认BEHAVIOR_SET_USER_VISIBLE_HINT；会触发fragment 的 setUserVisibleHint()
         mTitles = titles;
     }
 

@@ -24,6 +24,8 @@ import me.yokeyword.sample.demo_flow.base.MySupportActivity;
 import me.yokeyword.sample.demo_flow.base.MySupportFragment;
 import me.yokeyword.sample.demo_flow.ui.fragment.account.LoginFragment;
 import me.yokeyword.sample.demo_flow.ui.fragment.discover.DiscoverFragment;
+import me.yokeyword.sample.demo_flow.ui.fragment.discover.DiscoverVp2Fragment;
+import me.yokeyword.sample.demo_flow.ui.fragment.discover.PagerChildFragment;
 import me.yokeyword.sample.demo_flow.ui.fragment.home.HomeFragment;
 import me.yokeyword.sample.demo_flow.ui.fragment.shop.ShopFragment;
 
@@ -161,13 +163,22 @@ public class MainActivity extends MySupportActivity
                         // 如果已经在栈内,则以SingleTask模式start
                         myHome.start(fragment, SupportFragment.SINGLETASK);
                     }
+                } else if (id == R.id.nav_discover_vp2) {
+//                    start(PagerChildFragment.newInstance(0));
+                    DiscoverVp2Fragment fragment = findFragment(DiscoverVp2Fragment.class);
+                    if (fragment == null) {
+                        myHome.startWithPopTo(DiscoverVp2Fragment.newInstance(), HomeFragment.class, false);
+                    } else {
+                        // 如果已经在栈内,则以SingleTask模式start
+                        myHome.start(fragment, SupportFragment.SINGLETASK);
+                    }
                 } else if (id == R.id.nav_shop) {
                     ShopFragment fragment = findFragment(ShopFragment.class);
                     if (fragment == null) {
                         myHome.startWithPopTo(ShopFragment.newInstance(), HomeFragment.class, false);
                     } else {
                         // 如果已经在栈内,则以SingleTask模式start,也可以用popTo
-//                        start(fragment, SupportFragment.SINGLETASK);
+                        //                        start(fragment, SupportFragment.SINGLETASK);
                         myHome.popTo(ShopFragment.class, false);
                     }
                 } else if (id == R.id.nav_login) {

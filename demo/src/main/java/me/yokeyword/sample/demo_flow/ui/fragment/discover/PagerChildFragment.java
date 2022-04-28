@@ -3,6 +3,8 @@ package me.yokeyword.sample.demo_flow.ui.fragment.discover;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,5 +92,23 @@ public class PagerChildFragment extends MySupportFragment {
                 mAdapter.setDatas(items);
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.i("PagerChildFragment", "onResume:" + mFrom);
+    }
+
+    @Override
+    public void onSupportVisible() {
+        super.onSupportVisible();
+        Log.i("PagerChildFragment", "onSupportVisible:" + mFrom);
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        Log.i("PagerChildFragment", "setUserVisibleHint:" + mFrom);
     }
 }
