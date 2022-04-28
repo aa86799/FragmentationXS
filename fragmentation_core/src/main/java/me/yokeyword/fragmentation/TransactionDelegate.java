@@ -281,6 +281,9 @@ class TransactionDelegate {
             @Override
             public void run() {
                 handleAfterSaveInStateTransactionException(fm, "pop()");
+                /*
+                 * 仅 popback 时，也正常； 仅 remove 时，后退变白屏了。
+                 */
                 removeTopFragment(fm);
                 fm.popBackStackImmediate();
             }
@@ -492,6 +495,7 @@ class TransactionDelegate {
         FragmentTransaction transaction = fm.beginTransaction()
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
         for (Fragment fragment : willPopFragments) {
+            if (fragment == null) continue;
             transaction.remove(fragment);
         }
         transaction.commitAllowingStateLoss();

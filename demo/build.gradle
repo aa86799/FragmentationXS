@@ -48,11 +48,11 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
-//    api project(':fragmentation')
-//    api project(':fragmentation_swipeback')
+    api project(':fragmentation')
+    api project(':fragmentation_swipeback')
 
-    api 'me.xuexuan:fragmentationx:1.0.6'
-    api 'me.xuexuan:fragmentationx-swipeback:1.0.6'
+//    api 'me.xuexuan:fragmentationx:1.0.6'
+//    api 'me.xuexuan:fragmentationx-swipeback:1.0.6'
 
     // EventBus
     api project(':eventbus_activity_scope')
