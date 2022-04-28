@@ -10,11 +10,19 @@ android {
 
         consumerProguardFiles 'proguard-rules.pro'
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 dependencies {
     compileOnly "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
-    compileOnly project(':fragmentation')
+//    compileOnly project(':fragmentation')
+    implementation "io.github.aa86799:FragmentationXS:1.0.1"
 }
 
 
@@ -28,3 +36,6 @@ dependencies {
 //    website = rootProject.website
 //    licences = rootProject.licences
 //}
+
+// 平常把这个引用注释掉
+//apply from: "publish_maven_central.gradle"

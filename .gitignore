@@ -7,3 +7,4 @@
 .DS_Store
 /build
 /captures
+publish_maven_central.gradle

@@ -8,12 +8,21 @@ android {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 dependencies {
     compileOnly "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
-    api project(':fragmentation_core')
+//    api project(':fragmentation_core')
 //    api 'me.xuexuan:fragmentationx-core:1.0.6'
+    // 发布时，先发布 core，再引用 core，发布当前
+    implementation "io.github.aa86799:FragmentationXS-core:1.0.1"
 }
 
 
@@ -27,3 +36,6 @@ dependencies {
 //    website = rootProject.website
 //    licences = rootProject.licences
 //}
+
+// 平常把这个引用注释掉
+//apply from: "publish_maven_central.gradle"

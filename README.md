@@ -1,3 +1,9 @@
+```
+implementation "io.github.aa86799:FragmentationXS-core:1.0.1"
+implementation "io.github.aa86799:FragmentationXS:1.0.1"
+implementation "io.github.aa86799:FragmentationXS-swipeback:1.0.1"
+```
+
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Fragmentation-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5937)
 [![Build Status](https://github.com/JantHsueh/Fragmentation/workflows/RELEASE_CI/badge.svg?branch=androidx)](https://github.com/JantHsueh/Fragmentation/workflows/RELEASE_CI/badge.svg?branch=androidxn)
 [![Download](https://api.bintray.com/packages/jantxue/maven/Fragmentationx/images/download.svg) ](https://bintray.com/jantxue/maven/Fragmentationx/_latestVersion)
